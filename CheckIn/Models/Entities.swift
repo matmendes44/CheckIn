@@ -5,7 +5,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 enum UserRole: String, Codable {
     case student
@@ -20,8 +19,8 @@ enum FeedbackStatus: String, Codable {
     case open, acknowledged, inProgress, done
 }
 
-///The user who is logged in. Role defines if they area student or professor.
-struct User: Identifiable, Codable{
+///The user who is logged in. Role defines if they are student or professor.
+struct User: Identifiable, Codable {
     let id: String
     var name: String
     var role: UserRole
@@ -34,18 +33,18 @@ struct Course: Identifiable, Codable {
     let id: String
     var name: String
     var joinCode: String
-    var professorId: String
+    var professorID: String
 }
 
 ///The anonymous feedback.
 /// - Feedback Category, courseID, createdAt, and ID never change so they're let
 struct Feedback: Identifiable, Codable {
-    //No User name to ID post for annonimity
+    //No User name to ID post for anonimity
     let id: String
-    let courseId: String
+    let courseID: String
     var category: FeedbackCategory
     var comment: String
-    var upVoteCount: Int
+    var upvoteCount: Int
     var status: FeedbackStatus
     var professorReply: String?
     let createdAt: Date
@@ -54,11 +53,12 @@ struct Feedback: Identifiable, Codable {
 ///The quick how was class summary pop up
 struct CheckIn: Identifiable, Codable {
     let id: String
-    let courseId: String
+    let courseID: String
     let rating: Int     //I was thinking 1..5 but we could do other options
     let date: Date
 }
 
 
 struct CategorySummary { let category: FeedbackCategory; let items: [Feedback]}
+
 struct RatingTrendPoint { let date: Date; let average: Double}

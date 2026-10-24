@@ -24,11 +24,11 @@ protocol CourseService {
 
 ///Manages core feedback loop between different users
 protocol FeedbackService {
-    func submit (courseID: String, category: FeedbackCategory, comment: String) async throws
-    func feedback (for courseID: String) async throws -> [Feedback] //sorted by upvotes
-    func toggleUpVote(feedbackId: String) async throws
+    func submit(courseID: String, category: FeedbackCategory, comment: String) async throws
+    func feedback(for courseID: String) async throws -> [Feedback] //sorted by upvotes
+    func toggleUpvote(feedbackID: String) async throws
     func reply (feedbackID: String, text: String) async throws      //professors reply
-    func setStatus (feedbackID: String, status: FeedbackStatus) async throws
+    func setStatus(feedbackID: String, status: FeedbackStatus) async throws
 }
 
 ///Handles the check in pop up and tracks class rating over time into data points (RatingTrendPoint)
@@ -39,7 +39,7 @@ protocol CheckInService {
 
 ///Moderation service that protects against inappropriate feedback
 protocol ModerationService {
-    func validate (_ text: String) -> ModerationResult      //checks user input scanning for harm.
+    func validate(_ text: String) -> ModerationResult      //checks user input scanning for harm.
 }
 
 
