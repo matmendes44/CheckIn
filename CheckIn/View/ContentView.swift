@@ -2,8 +2,8 @@
 //  ContentView.swift
 //  CheckIn
 //
-//  Created by Matheus Mendes on 10/23/26.
-//
+// View for thread display and interaction in the CheckIn app.
+// View section created by Aniyah Davis
 
 import SwiftUI
 
