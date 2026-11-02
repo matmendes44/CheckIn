@@ -58,7 +58,7 @@ struct CourseThread: View {
         .padding(.vertical, 4)
     }
 }
-struct ThreadDetailView: View {
+struct CourseThreadDetailView: View {
     let thread: Thread
 
     var body: some View {
@@ -74,7 +74,7 @@ struct ThreadDetailView: View {
         #if os(iOS){
         .navigationBarTitleDisplayMode(.inline)
         }
-    }
+    } 
 }
 }
 
