@@ -6,6 +6,10 @@
 // View section created by Aniyah Davis
 
 import SwiftUI
+import Foundation
+
+
+
 
 struct ContentView: View {
     var body: some View {
@@ -16,13 +20,33 @@ struct ContentView: View {
                     .imageScale(.large)
                     .foregroundStyle(.tint)
                 Text("CheckIn")
+                    .font(.largeTitle.bold())
+                    .foregroundStyle(.primary)
+                    .padding(.bottom, 20)
             }
             .padding()
             .navigationTitle("CheckIn")
         }
         .padding()
     }
+
+struct LoginPage: View {
+    var body: some View {
+        Text("Login Screen")
+    }
+}
+
+
+struct AuthenticationScreen: View, AuthService {
+    var body: some View {
+        Text("Authentication Screen")
+    }
+
+}
+
 struct CourseThread: View {
+    @Environment(EntitiesModel.self) var entitiesModel
+
     let thread: Thread
     let onUpvote: () -> Void
 
@@ -59,6 +83,9 @@ struct CourseThread: View {
     }
 }
 struct CourseThreadDetailView: View {
+    @Environment(EntitiesModel.self) var entitiesModel
+    @Environment(\.dismiss) var dismiss
+
     let thread: Thread
 
     var body: some View {
@@ -76,6 +103,20 @@ struct CourseThreadDetailView: View {
         }
     } 
 }
+
+struct CourseThreadPostCreation: View {
+    @Environment(EntitiesModel.self) var entitiesModel
+
+   @State private var title: String = ""
+   @State private var body: String = ""
+   @State private var user: String = ""
+   @State private var subthread: String = ""
+
+    var body: some View {
+        Text("Course Thread Post Creation Screen")
+         }
+
+    }
 }
 
 #Preview {
