@@ -70,7 +70,7 @@ struct MockCourseService: CourseService {
 
 struct MockFeedbackService: FeedbackService {
     func submit(courseID: String, category: FeedbackCategory, comment: String) async throws {}
-    func feedback(for courseId: String) async throws -> [Feedback] { MockData.feedback }
+    func feedback(for courseID: String) async throws -> [Feedback] { MockData.feedback }
     func toggleUpvote(feedbackID: String) async throws {}
     func reply(feedbackID: String, text: String) async throws {}
     func setStatus(feedbackID: String, status: FeedbackStatus) async throws {}

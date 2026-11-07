@@ -13,7 +13,7 @@ import Foundation
 
 struct ContentView: View {
     var body: some View {
-
+        
         NavigationStack {
             VStack {
                 Image(systemName: "globe")
@@ -29,22 +29,25 @@ struct ContentView: View {
         }
         .padding()
     }
-
-struct LoginPage: View {
-    var body: some View {
-        Text("Login Screen")
+    
+    struct LoginPage: View {
+        var body: some View {
+            Text("Login Screen")
+        }
     }
 }
 
 
-struct AuthenticationScreen: View, AuthService {
+struct AuthenticationScreen: View {
     var body: some View {
         Text("Authentication Screen")
     }
 
 }
 
-struct CourseThread: View {
+/*  TEMP Disabled
+ 
+ struct CourseThread: View {
     @Environment(EntitiesModel.self) var entitiesModel
 
     let thread: Thread
@@ -82,6 +85,7 @@ struct CourseThread: View {
         .padding(.vertical, 4)
     }
 }
+
 struct CourseThreadDetailView: View {
     @Environment(EntitiesModel.self) var entitiesModel
     @Environment(\.dismiss) var dismiss
@@ -98,17 +102,20 @@ struct CourseThreadDetailView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .navigationTitle("r/\(thread.subreddit)")
-        #if os(iOS){
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        #endif
         }
-    } 
+    }
 }
+*/
 
 struct CourseThreadPostCreation: View {
-    @Environment(EntitiesModel.self) var entitiesModel
+    //  Temp Disabled
+    //@Environment(EntitiesModel.self) var entitiesModel
 
    @State private var title: String = ""
-   @State private var body: String = ""
+   @State private var postbody: String = ""
    @State private var user: String = ""
    @State private var subthread: String = ""
 
@@ -117,7 +124,6 @@ struct CourseThreadPostCreation: View {
          }
 
     }
-}
 
 #Preview {
     ContentView()
