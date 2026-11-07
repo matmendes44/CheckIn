@@ -4,12 +4,7 @@
 //
 //  Created by Franklin Atika on 10/29/26.
 //
-//
-//  EntitiesModel.swift
-//  CheckIn
-//
-//  Created by Franklin Atika on 10/28/26.
-//
+
 import Foundation
 import SwiftUI
 internal import Combine
