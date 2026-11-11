@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4A1259"/>
+      <stop offset="0.5" stop-color="#3A1670"/>
+      <stop offset="1" stop-color="#1B3A8C"/>
+    </linearGradient>
+    <linearGradient id="check" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6A1B9A"/>
+      <stop offset="1" stop-color="#2346A8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <!-- background ring motif from the title slide -->
+  <circle cx="130" cy="120" r="420" fill="none" stroke="#fff" stroke-opacity="0.10" stroke-width="6"/>
+  <circle cx="130" cy="120" r="520" fill="none" stroke="#fff" stroke-opacity="0.12" stroke-width="4" stroke-dasharray="4 14" stroke-linecap="round"/>
+  <path d="M 860 960 A 300 300 0 0 1 560 1090" fill="none" stroke="#fff" stroke-opacity="0.12" stroke-width="10" stroke-linecap="round"/>
+  <!-- speech bubble (feedback) -->
+  <path d="M 352 222 H 672 A 140 140 0 0 1 812 362 V 552 A 140 140 0 0 1 672 692 H 470 L 330 812 V 692 H 352 A 140 140 0 0 1 212 552 V 362 A 140 140 0 0 1 352 222 Z" fill="#fff"/>
+  <!-- check mark (check-in) -->
+  <path d="M 372 462 L 475 565 L 662 360" fill="none" stroke="url(#check)" stroke-width="64" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
