@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct CheckInApp: App {
+    @StateObject private var env = AppEnvironment()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(env)
         }
     }
 }

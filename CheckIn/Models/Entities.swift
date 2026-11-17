@@ -3,7 +3,6 @@
 //
 //  Created by Matheus Mendes on 10/23/26.
 //
-
 import Foundation
 
 enum UserRole: String, Codable {
@@ -24,16 +23,18 @@ struct User: Identifiable, Codable {
     let id: String
     var name: String
     var role: UserRole
+    var email: String? = nil
 }
 
 ///This is an active course.
 /// - Join code allows students to enroll.
 /// - Professor ID links the course to the professor.
-struct Course: Identifiable, Codable {
+struct Course: Identifiable, Codable, Hashable {
     let id: String
     var name: String
     var joinCode: String
     var professorID: String
+    var professorName: String = ""
 }
 
 ///The anonymous feedback.
