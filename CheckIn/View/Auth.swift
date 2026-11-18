@@ -101,8 +101,8 @@ struct MockAuthService: AuthService {
     func signIn(authenticate: WebAuthenticate) async throws -> User {
         UserFactory.user(from: IdentityClaims(
             subject: asProfessor ? "prof-123" : "stud-456",
-            name: asProfessor ? "Dr. Alex Rivera" : "Real Student Name",
-            email: asProfessor ? "arivera@university.edu" : "student@university.edu",
+            name: asProfessor ? "Mr. Jal Irani" : "Real Student Name",
+            email: asProfessor ? "JIrani@university.edu" : "student@university.edu",
             affiliations: [asProfessor ? "faculty" : "student"]))
     }
 }

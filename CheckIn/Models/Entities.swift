@@ -14,7 +14,7 @@ enum FeedbackCategory: String, Codable, CaseIterable {
     case pace, clarity, volume, examples, materials, assignments
 }
 
-enum FeedbackStatus: String, Codable {
+enum FeedbackStatus: String, Codable, CaseIterable {
     case open, acknowledged, inProgress, done
 }
 
